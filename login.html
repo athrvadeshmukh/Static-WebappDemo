@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrimeCart | Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-body">
+    <div class="auth-shell">
+      <div class="auth-card">
+        <div class="auth-brand">
+          <div class="brand-logo">P</div>
+          <div>
+            <div class="brand-name">PrimeCart</div>
+            <small>Welcome back</small>
+          </div>
+        </div>
+
+        <h2>Login to your account</h2>
+        <form id="loginForm" class="auth-form">
+          <label>
+            Email address
+            <input type="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Password
+            <input type="password" placeholder="Enter your password" required />
+          </label>
+
+          <div class="auth-row">
+            <label class="checkbox-wrap">
+              <input type="checkbox" />
+              <span>Remember me</span>
+            </label>
+            <a href="#">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="primary-btn full-width">Login</button>
+        </form>
+
+        <p class="auth-footer">
+          Don’t have an account?
+          <a href="signup.html">Sign up</a>
+        </p>
+        <a class="link-back" href="index.html">← Back to shopping</a>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

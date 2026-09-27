@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrimeCart | Online Shopping</title>
+    <meta
+      name="description"
+      content="PrimeCart is a modern shopping website with products, cart, checkout, and account pages."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <div class="brand-wrap">
+          <div class="brand-logo">P</div>
+          <div>
+            <div class="brand-name">PrimeCart</div>
+            <small>Fast. Fresh. Smart.</small>
+          </div>
+        </div>
+
+        <div class="search-wrap">
+          <input id="searchInput" type="text" placeholder="Search products, brands, categories..." />
+          <button class="search-btn" type="button">Search</button>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#">Home</a>
+          <a href="#deals">Deals</a>
+          <a href="#products">Products</a>
+          <a href="#support">Support</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="login.html" class="nav-action-link">Login</a>
+          <a href="signup.html" class="nav-action-link signup">Sign Up</a>
+          <button class="cart-btn" type="button" aria-label="Shopping cart">
+            <span>Cart</span>
+            <span id="cartCount" class="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="badge">Weekend sale</span>
+            <h1>Shop smarter. Save bigger.</h1>
+            <p>
+              Discover trending electronics, home essentials, fashion drops, and top-rated accessories.
+            </p>
+            <div class="hero-actions">
+              <a href="#products" class="primary-btn">Shop now</a>
+              <a href="#deals" class="secondary-btn">View deals</a>
+            </div>
+            <div class="stat-row">
+              <div>
+                <strong>120K+</strong>
+                <span>Happy shoppers</span>
+              </div>
+              <div>
+                <strong>4.8/5</strong>
+                <span>Average rating</span>
+              </div>
+              <div>
+                <strong>24/7</strong>
+                <span>Customer support</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="floating-card card-one">
+              <span>Best Seller</span>
+              <strong>Noise Cancelling Headphones</strong>
+              <small>From $129</small>
+            </div>
+            <div class="floating-card card-two">
+              <span>New arrival</span>
+              <strong>Smart Fitness Watch</strong>
+              <small>From $89</small>
+            </div>
+            <div class="main-visual">
+              <img
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80"
+                alt="product showcase"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="category-strip">
+        <div class="container category-grid">
+          <button class="category-pill active" data-category="all" type="button">All Products</button>
+          <button class="category-pill" data-category="electronics" type="button">Electronics</button>
+          <button class="category-pill" data-category="fashion" type="button">Fashion</button>
+          <button class="category-pill" data-category="home" type="button">Home</button>
+          <button class="category-pill" data-category="beauty" type="button">Beauty</button>
+          <button class="category-pill" data-category="sports" type="button">Sports</button>
+        </div>
+      </section>
+
+      <section id="deals" class="deals-section">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Top deals</p>
+              <h2>Hot offers this week</h2>
+            </div>
+            <a href="#products">See more</a>
+          </div>
+
+          <div class="deal-grid">
+            <article class="deal-card deal-card-large">
+              <div>
+                <span class="mini-tag">Flash sale</span>
+                <h3>Smart home essentials</h3>
+                <p>Save up to 50% this weekend</p>
+                <button type="button" class="deal-btn">Shop now</button>
+              </div>
+              <img
+                src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=900&q=80"
+                alt="smart home setup"
+              />
+            </article>
+
+            <article class="deal-card">
+              <div>
+                <span class="mini-tag">Limited stock</span>
+                <h3>New arrivals</h3>
+                <p>Fresh looks for work and play</p>
+              </div>
+              <img
+                src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80"
+                alt="fashion deal"
+              />
+            </article>
+
+            <article class="deal-card">
+              <div>
+                <span class="mini-tag">Trending</span>
+                <h3>Tech bundle</h3>
+                <p>Save on must-have gadgets</p>
+              </div>
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+                alt="tech bundle"
+              />
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="products-section">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Popular picks</p>
+              <h2>Featured products</h2>
+            </div>
+            <div class="sort-group">
+              <label for="sortSelect">Sort by</label>
+              <select id="sortSelect">
+                <option value="featured">Featured</option>
+                <option value="lowToHigh">Price: Low to High</option>
+                <option value="highToLow">Price: High to Low</option>
+                <option value="rating">Top Rated</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="productGrid" class="product-grid"></div>
+        </div>
+      </section>
+
+      <section class="benefits-section">
+        <div class="container benefit-grid">
+          <article>
+            <span>🚚</span>
+            <h3>Free delivery</h3>
+            <p>On orders over $50</p>
+          </article>
+          <article>
+            <span>🛡️</span>
+            <h3>Secure payment</h3>
+            <p>Protected checkout</p>
+          </article>
+          <article>
+            <span>↩️</span>
+            <h3>Easy returns</h3>
+            <p>30-day trial guarantee</p>
+          </article>
+          <article>
+            <span>⭐</span>
+            <h3>Top rated</h3>
+            <p>Trusted by millions</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart panel">
+      <div class="cart-header">
+        <h3>Your cart</h3>
+        <button class="close-cart" type="button" aria-label="Close cart">×</button>
+      </div>
+
+      <div id="cartItems" class="cart-items"></div>
+
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <strong id="subtotalValue">$0.00</strong>
+        </div>
+        <div class="summary-row">
+          <span>Shipping</span>
+          <strong id="shippingValue">$0.00</strong>
+        </div>
+        <div class="summary-row total-row">
+          <span>Total</span>
+          <strong id="totalValue">$0.00</strong>
+        </div>
+        <button id="checkoutBtn" class="primary-btn checkout-btn" type="button">Proceed to checkout</button>
+      </div>
+    </aside>
+
+    <div id="cartOverlay" class="cart-overlay"></div>
+
+    <div id="checkoutModal" class="modal hidden" aria-modal="true" role="dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Checkout</h3>
+          <button class="close-modal" type="button" aria-label="Close checkout">×</button>
+        </div>
+
+        <form id="checkoutForm" class="checkout-form">
+          <div class="form-grid">
+            <label>
+              Full name
+              <input type="text" name="name" placeholder="John Smith" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="john@example.com" required />
+            </label>
+            <label class="full-span">
+              Address
+              <input type="text" name="address" placeholder="123 Street Avenue" required />
+            </label>
+            <label>
+              City
+              <input type="text" name="city" placeholder="New York" required />
+            </label>
+            <label>
+              ZIP
+              <input type="text" name="zip" placeholder="10001" required />
+            </label>
+            <label class="full-span">
+              Card number
+              <input type="text" name="card" placeholder="4242 4242 4242 4242" required />
+            </label>
+          </div>
+
+          <button type="submit" class="primary-btn full-width">Pay now</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
